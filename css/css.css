@@ -1,0 +1,16 @@
+body {
+	padding: 25px;
+}
+
+.toDolist {
+	padding-top: 100px;
+}
+
+.toDoItem {
+	padding: 10px 0px;
+	width: 150px;
+}
+
+.inputDiv {
+	padding-top: 10px;
+}
