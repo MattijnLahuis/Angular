@@ -23,7 +23,20 @@
             To-do list
         </title>
     </head>
-    <body ng-app="myApp">
-        <to-do></to-do>
+    <body ng-app="myApp" ng-controller="ToDoController">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 toDolist">
+                    <h2>Angular To-Do list</h2>
+                    <div ng-repeat="item in toDoList" class="toDoItem">
+                        {{ item }}
+                    </div>
+                    <div class="inputDiv">
+                        <input type="text" ng-model="toDoInput" placeholder="I want to do.." />
+                        <input type="button" class="btn btn-primary" value="Add to list" ng-click="addItem()"></input>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

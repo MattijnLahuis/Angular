@@ -1,15 +1,17 @@
 (function() {
     'use strict';
 
+    angular.module('myApp', []);
+
     angular
-        .module('myApp.controllers')
+        .module('myApp')
         .controller("ToDoController", ToDoController);
 
     ToDoController.$inject = ['$scope'];
 
     function ToDoController($scope) {
         $scope.message = "hello";
-        $scope.toDoList = ["a list", "of test", "items"];
+        $scope.toDoList = [];
         $scope.toDoInput = "";
 
 
