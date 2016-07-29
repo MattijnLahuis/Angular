@@ -1,0 +1,38 @@
+body {
+	padding: 25px;
+}
+
+.toDolist {
+	padding-top: 100px;
+}
+
+.items {
+	padding: 10px 0px;
+	width: 150px;
+}
+
+.items div {
+	display: table-cell;
+	width: 100px;
+	padding: 0px 10px;
+}
+
+.inputDiv {
+	padding-top: 10px;
+}
+
+table {
+	/*margin-left: 50px;*/
+}
+
+table tr td {
+	padding: 5px 15px;
+}
+
+.done {
+	text-decoration: line-through;
+}
+
+.delete {
+	cursor: pointer;
+}

@@ -5,19 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="css/css.css" rel="stylesheet">
+        <link href="css/css.css" rel="stylesheet" \>
 
         <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet" \>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" \>
+
         <script src="js/angular/angular-1.5.7.min.js"></script>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap/bootstrap.min.js"></script>
 
-        <script src="js/angular/todo.js"></script>
         <script src="js/angular/controllers/todo.controller.js"></script>
-        <script src="js/angular/directives/todo.directive.js"></script>
 
         <title>
             To-do list
@@ -28,12 +29,16 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 toDolist">
                     <h2>Angular To-Do list</h2>
-                    <div ng-repeat="item in toDoList" class="toDoItem">
-                        {{ item }}
-                    </div>
+                    <table>
+                        <tr ng-repeat="item in toDoList">
+                            <td><input type="checkbox" ng-model="item.checked"></td>
+                            <td ng-class="{done: item.checked}">{{ item.name }}</td>
+                            <td class="delete" ng-click="deleteItem($index);"><i class="fa fa-trash"></i></td>
+                        </tr>
+                    </table>
                     <div class="inputDiv">
                         <input type="text" ng-model="toDoInput" placeholder="I want to do.." />
-                        <input type="button" class="btn btn-primary" value="Add to list" ng-click="addItem()"></input>
+                        <input type="button" class="btn btn-primary" value="Add to list" ng-click="addItem()" />
                     </div>
                 </div>
             </div>
