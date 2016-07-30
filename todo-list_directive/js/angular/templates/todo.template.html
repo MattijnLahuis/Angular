@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 toDolist">
+            <h2>Angular To-Do list</h2>
+            <table>
+                <tr ng-repeat="item in toDoList">
+                    <td><input type="checkbox" ng-model="item.checked"></td>
+                    <td ng-class="{done: item.checked}">{{ item.name }}</td>
+                    <td class="delete" ng-click="deleteItem($index);"><i class="fa fa-trash"></i></td>
+                </tr>
+            </table>
+            <div class="inputDiv">
+                <input type="text" ng-model="toDoInput" placeholder="I want to do.." />
+                <input type="button" class="btn btn-primary" value="Add to list" ng-click="addItem()" />
+            </div>
+        </div>
+    </div>
+</div>

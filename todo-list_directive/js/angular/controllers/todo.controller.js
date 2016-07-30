@@ -1,10 +1,8 @@
 (function() {
     'use strict';
 
-    angular.module('myApp', []);
-
     angular
-        .module('myApp')
+        .module('myApp.controllers')
         .controller("ToDoController", ToDoController);
 
     ToDoController.$inject = ['$scope'];
