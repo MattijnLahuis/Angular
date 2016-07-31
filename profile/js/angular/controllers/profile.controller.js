@@ -1,8 +1,6 @@
 (function() {
     'use strict';
 
-    angular.module('profile', []);
-
     angular
         .module('profile')
         .controller("profileController", profileController);
@@ -17,6 +15,7 @@
             city: "",
             phone: ""
         };
+
         $scope.editProfile = true;
     }
 
